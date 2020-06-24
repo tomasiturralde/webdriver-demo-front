@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="form">
+    <h1 id="form-title">User Form</h1>
+    <form [formGroup]="userForm" novalidate (submit)="saveUser()">
+      <div class="input-holder">
+        <label>
+          <input placeholder="First Name" class="input" formControlName="name" id="name" type="text">
+        </label>
+      </div>
+
+      <div class="input-holder">
+        <label>
+          <input placeholder="Email" class="input" formControlName="email" id="email" type="email">
+        </label>
+      </div>
+
+      <div class="input-holder">
+        <label>
+          <input placeholder="Street" class="input" formControlName="street" id="street" type="text">
+        </label>
+      </div>
+
+      <div class="input-holder">
+        <label>
+          <input placeholder="Zip Code" class="input" formControlName="zipCode" id="zipCode" type="number">
+        </label>
+      </div>
+
+      <button name="submit" [disabled]="!userForm.valid">Send</button>
+    </form>
+
+    <div class="button">
+      <button id="second-screen-button" (click)="goToScreen()">Go to Second Screen</button>
+    </div>
+  </div>
+  <div class="list">
+    <h1 id="list-title">User List</h1>
+    <h3 id="last-added">{{responseMsg}}</h3>
+
+    <div class="card" *ngFor="let user of users">
+      <div class="user-title">
+          <span id="user-name">{{user.name}}</span>
+      </div>
+      <div class="user-subtitle">
+        <span id="user-email">Email: {{user.email}}</span>
+        <span id="user-street">Street: {{user.street}}</span>
+        <span id="user-zipCode">Zip Code: {{user.zipCode}}</span>
+      </div>
+    </div>
+  </div>
+</div>

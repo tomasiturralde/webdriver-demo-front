@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+}
+
+.form {
+  width: 40%;
+}
+
+.list {
+  width: 60%;
+}
+
+.user-title {
+  width: 100%;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.user-subtitle {
+  width: 100%;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  border-bottom: grey solid 1px;
+  margin-bottom: 20px;
+}
+
+.input-holder {
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.input {
+  width: 100%;
+}
+
+.button {
+  margin-top: 50px;
+}
